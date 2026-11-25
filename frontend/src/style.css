@@ -1,0 +1,99 @@
+/* Green Express shared styles: layout, forms, tables, and responsive views. */
+* { box-sizing: border-box; }
+body { margin: 0; color: #172b45; background: #fff; font: 16px/1.55 "Avenir Next", Arial, sans-serif; }
+h1, h2, h3 { margin: 0 0 16px; line-height: 1.15; font-weight: 750; }
+h1 { font-size: clamp(34px, 5vw, 56px); }
+h2 { font-size: 27px; }
+h3 { font-size: 20px; }
+p { margin: 0 0 12px; }
+a { color: #1d58b8; }
+input, select, textarea, button { font: inherit; }
+.container { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+.page { padding-top: 48px; padding-bottom: 64px; }
+.small-page { max-width: 560px; }
+.muted { color: #667387; font-size: 14px; }
+.lead { max-width: 650px; margin: 0 0 30px; color: #5b6478; font-size: 19px; }
+.navbar { border-bottom: 1px solid #dde2ea; background: #fff; }
+.navbar-inner { display: flex; min-height: 70px; flex-wrap: wrap; align-items: center; gap: 14px 30px; }
+.logo { display: flex; align-items: center; gap: 9px; color: #14213d; font-size: 20px; font-weight: 800; text-decoration: none; }
+.logo-mark { display: grid; width: 32px; height: 32px; place-items: center; border-radius: 7px; background: #14213d; color: #f4a300; }
+.nav-links, .nav-user { display: flex; align-items: center; gap: 19px; }
+.nav-user { margin-left: auto; }
+.navbar a:not(.btn) { color: #596579; font-size: 14px; text-decoration: none; }
+.navbar a.active { color: #14213d; font-weight: 700; }
+.nav-name { color: #667387; font-size: 14px; }
+.btn { display: inline-flex; min-height: 44px; align-items: center; justify-content: center; padding: 9px 20px; border: 2px solid #14213d; border-radius: 6px; background: #14213d; color: #fff; cursor: pointer; font-weight: 650; text-decoration: none; }
+.btn:hover { background: #263a66; }
+.btn-outline { border-color: #c9d0dc; background: #fff; color: #14213d; }
+.btn-outline:hover { background: #eef2f7; }
+.btn-small { min-height: 34px; padding: 5px 12px; font-size: 13px; }
+.btn-big { min-height: 50px; padding: 12px 27px; }
+.hero { padding-top: 68px; }
+.hero-title { max-width: 14ch; margin-bottom: 20px; font-size: clamp(43px, 7vw, 82px); line-height: .99; letter-spacing: -.035em; }
+.hero-text { max-width: 660px; margin-bottom: 38px; color: #5b6478; font-size: 19px; }
+.track-band { padding: 26px 0; background: #f4a300; }
+.track-form label { display: block; margin-bottom: 8px; font-weight: 700; }
+.track-row { display: flex; max-width: 570px; gap: 9px; }
+.track-row input { min-width: 0; flex: 1; }
+input, select, textarea { width: 100%; min-height: 44px; padding: 10px 12px; border: 1px solid #cbd3de; border-radius: 5px; background: #fff; color: #14213d; }
+textarea { resize: vertical; }
+input:focus, select:focus, textarea:focus { outline: 2px solid #7da5d1; outline-offset: 1px; }
+.section { padding-top: 52px; padding-bottom: 52px; }
+.section-grey { background: #f5f7fa; }
+.service-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 24px 0; }
+.service, .card { padding: 20px; border: 1px solid #e0e4eb; border-radius: 8px; background: #fff; }
+.service-type { color: #758096; font-size: 12px; font-weight: 700; text-transform: uppercase; }
+.service-price { margin-bottom: 4px; font-size: 18px; font-weight: 750; }
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; padding-left: 24px; }
+.steps li { padding-left: 5px; }
+.card { margin-top: 22px; }
+.form { display: grid; gap: 16px; }
+.form label { display: grid; gap: 6px; font-weight: 650; }
+.form p { margin-bottom: 0; }
+.two-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.book-form { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; gap: 16px; }
+.book-form fieldset { min-width: 0; }
+.book-form legend { padding: 0 6px; font-size: 18px; font-weight: 700; }
+.price-preview, .price-result { padding: 12px; border-radius: 6px; background: #fff8e5; }
+.price-result { display: grid; gap: 5px; font-size: 14px; }
+.price-result strong { font-size: 24px; }
+.error { color: #a32727; }
+.success { color: #1d7543; }
+.table-scroll, .table-wrap { overflow-x: auto; margin: 16px 0 32px; }
+.table { width: 100%; border-collapse: collapse; background: #fff; font-size: 14px; }
+.table th, .table td, table th, table td { padding: 12px; border-bottom: 1px solid #e2e6ed; text-align: left; vertical-align: top; }
+.table th, table th { background: #f4f6f9; font-size: 12px; white-space: nowrap; }
+.status { display: inline-block; padding: 4px 9px; border-radius: 15px; background: #eef2f7; font-size: 12px; font-weight: 700; white-space: nowrap; }
+.status-delivered { background: #e5f5e9; color: #22643a; }
+.status-cancelled { background: #fde9e7; color: #9e342b; }
+.stats { display: flex; flex-wrap: wrap; gap: 14px; margin: 20px 0 34px; }
+.stats > div { min-width: 145px; padding: 16px; border: 1px solid #e0e4eb; border-radius: 7px; }
+.stats strong { display: block; font-size: 25px; }
+.message { margin: 14px 0; }
+.update-form { display: grid; min-width: 230px; gap: 6px; }
+.tracking-number { font-size: 23px; font-weight: 750; }
+.track-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 15px; }
+.progress { margin: 22px 0; padding: 16px; border-radius: 7px; background: #f3f6fa; }
+.cancelled-text { color: #a32727; font-weight: 700; }
+.footer { padding: 28px 0; border-top: 1px solid #dde2ea; background: #f7f8fa; color: #657084; font-size: 14px; }
+.footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 22px; }
+.footer-logo { color: #14213d; font-size: 18px; font-weight: 800; }
+.footer-links { display: flex; gap: 18px; }
+.footer-note { margin-top: 20px; padding-top: 15px; border-top: 1px solid #e0e4eb; font-size: 12px; }
+
+@media (max-width: 850px) {
+  .service-grid { grid-template-columns: repeat(2, 1fr); }
+  .book-form { grid-template-columns: 1fr 1fr; }
+  .book-form fieldset:last-of-type { grid-column: 1 / -1; }
+}
+@media (max-width: 620px) {
+  .container { width: calc(100% - 28px); }
+  .navbar-inner { padding-block: 12px; }
+  .nav-links { order: 3; width: 100%; justify-content: space-between; gap: 8px; }
+  .nav-user { gap: 10px; }
+  .hero { padding-top: 45px; }
+  .track-row { flex-direction: column; }
+  .service-grid, .steps, .two-columns, .book-form { grid-template-columns: 1fr; }
+  .book-form fieldset:last-of-type { grid-column: auto; }
+  .steps { gap: 12px; }
+}
